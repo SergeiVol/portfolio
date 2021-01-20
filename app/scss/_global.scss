@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %dmsans-400;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+main {
+  flex-grow: 1;
+}
