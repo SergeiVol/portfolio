@@ -1,0 +1,5 @@
+.about {
+  &__inner {
+    @extend %inner-card;
+  }
+}
