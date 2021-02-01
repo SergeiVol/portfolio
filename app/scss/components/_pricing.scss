@@ -1,0 +1,40 @@
+.pricing {
+  margin-bottom: 30px;
+  &__title {
+    padding-bottom: 10px;
+    position: relative;
+    @extend %border-left;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: relative;
+    @extend %border-right;
+  }
+
+  &__item {
+    width: 50%;
+    position: relative;
+    @extend %border-top;
+    &:last-child {
+      &::after {
+        width: 0;
+      }
+    }
+  }
+
+  &__item-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    padding: 0 40px !important;
+  }
+
+  &__list-item {
+    list-style: disc;
+  }
+}

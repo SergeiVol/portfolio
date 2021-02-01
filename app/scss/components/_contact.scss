@@ -1,0 +1,138 @@
+.contact {
+  &__inner {
+    @extend %inner-card;
+  }
+
+  #map {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    @extend %border-right;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__item-text {
+    background-color: $accent;
+    padding: 0px 10px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    @extend %border-left;
+  }
+
+  &__form {
+    position: relative;
+    padding-bottom: 10px;
+    @extend %border-right;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    @extend %border-left;
+  }
+
+  &__form-box {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    padding: 0 40px 0 15px;
+    // display: block;
+    width: 100%;
+    height: 50px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgba(247, 238, 227, 0.4);
+    border-radius: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &[placeholder] {
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: 95% center;
+    }
+
+    &--name[placeholder] {
+      background-image: url("../../images/icons/user.svg");
+    }
+    &--email[placeholder] {
+      background-image: url("../../images/icons/mail.svg");
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 15px 30px 15px 15px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: rgba(247, 238, 227, 0.4);
+    border-radius: 10px;
+    &[placeholder] {
+      background-image: url("../../images/icons/message.svg");
+      background-repeat: no-repeat;
+      background-position: 98% 15%;
+      background-size: 18px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 50px;
+    padding: 15px 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    border: none;
+    background-color: $accent;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s linear, top 0.3 linear;
+    position: relative;
+    color: #fff;
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+
+    &:active {
+      top: 5px;
+    }
+  }
+
+  @extend %scrollbar;
+}

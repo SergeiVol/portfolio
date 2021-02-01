@@ -1,0 +1,51 @@
+.experience {
+  max-width: 600px;
+  width: 100%;
+  &__title {
+    padding-bottom: 10px;
+    position: relative;
+    @extend %border-right;
+  }
+
+  &__items {
+    padding: 10px 0;
+    & ul {
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    &:nth-child(odd) {
+      @extend %border-left;
+    }
+    &:nth-child(even) {
+      @extend %border-right;
+    }
+  }
+
+  &__organization,
+  &__period,
+  &__post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__span {
+    background-color: $accent;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    display: table;
+  }
+
+  &__text {
+    max-width: 250px;
+    width: 100%;
+  }
+}

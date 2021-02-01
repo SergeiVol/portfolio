@@ -3,3 +3,23 @@
 @import "reset";
 @import "libs";
 @import "global";
+
+@import "index/index";
+
+@import "components/menu";
+@import "components/background";
+@import "components/card-started";
+@import "components/card-right";
+@import "components/about";
+@import "components/about-me";
+@import "components/services";
+@import "components/pricing";
+
+@import "components/resume";
+@import "components/experience";
+@import "components/education";
+
+@import "components/works";
+
+@import "components/contact";
+@import "components/card";

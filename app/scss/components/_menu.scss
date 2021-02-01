@@ -1,0 +1,115 @@
+.menu {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 15px 25px;
+  background-color: #fff;
+  z-index: 10;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    padding-top: 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 55px;
+      top: 0;
+      right: -32px;
+      background-color: #c6c6c6;
+    }
+
+    &:last-child::after {
+      width: 0;
+    }
+
+    & + & {
+      margin-left: 10px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    @extend %roboto-700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $nav;
+    padding-top: 35px;
+    position: relative;
+    transition: color 0.2s linear;
+
+    &--about::before,
+    &--resume::before,
+    &--works::before,
+    &--blog::before,
+    &--contact::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-repeat: no-repeat;
+      transition: background-color 0.2s linear;
+    }
+
+    &--about::before {
+      mask-image: url("../../images/icons/user.svg");
+      width: 25px;
+      height: 29px;
+      left: 15px;
+    }
+
+    &--resume::before {
+      mask-image: url("../../images/icons/list.svg");
+      width: 29px;
+      height: 29px;
+      left: 17px;
+    }
+
+    &--works::before {
+      mask-image: url("../../images/icons/paint.svg");
+      width: 29px;
+      height: 29px;
+      left: 15px;
+    }
+
+    &--blog::before {
+      mask-image: url("../../images/icons/comment.svg");
+      width: 29px;
+      height: 29px;
+      left: 8px;
+    }
+    &--contact::before {
+      mask-image: url("../../images/icons/at.svg");
+      width: 29px;
+      height: 29px;
+      left: 20px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &::before {
+      background-color: $nav;
+    }
+
+    &--about:hover,
+    &--resume:hover,
+    &--works:hover,
+    &--blog:hover,
+    &--contact:hover {
+      &::before {
+        background-color: $accent;
+      }
+    }
+
+    &--active {
+      color: $accent;
+      &::before {
+        background-color: $accent;
+      }
+    }
+  }
+}

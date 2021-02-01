@@ -1,0 +1,6 @@
+.resume {
+  &__inner {
+    @extend %inner-card;
+  }
+  @extend %scrollbar;
+}

@@ -1,0 +1,67 @@
+.card {
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  border-radius: 10px;
+  transition: all 0.7s ease-in-out 0.1s;
+  transform: translateX(-200px);
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+    display: block;
+    transform: translateX(-6px);
+    transition: all 0.7s ease-in-out 0.1s;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background-color: #fff;
+    left: -11px;
+
+    z-index: 10;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+}
+
+// @keyframes popup {
+//   0% {
+//     transform: translateX(-100px);
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 0.9;
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// @keyframes popup-close {
+//   0% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+//   50% {
+//     opacity: 0.5;
+//   }
+//   100% {
+//     transform: translateX(-200px);
+//     opacity: 0;
+//   }
+// }

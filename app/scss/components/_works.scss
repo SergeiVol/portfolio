@@ -1,0 +1,111 @@
+.works {
+  &__inner {
+    @extend %inner-card;
+    height: 100%;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    position: relative;
+    padding-bottom: 20px;
+    @extend %border-right;
+  }
+
+  &__item {
+    max-width: 240px;
+    max-height: 240px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s linear;
+    overflow: hidden;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 150px !important;
+  }
+
+  &__box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(247, 238, 227, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    border-radius: 10px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__box-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__box-link {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__link {
+    display: block;
+    @extend %ubuntu-400;
+    font-size: 16px;
+    color: #fff;
+    width: 85px;
+    padding: 5px 0px;
+    border-radius: 10px;
+    background-color: $accent;
+    margin-right: 10px;
+    transition: background-color 0.3s linear, top 0.3s linear;
+    position: relative;
+    transition: transform 0.3s linear;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: darken($accent, 10%);
+      transform: scale(1.1);
+    }
+
+    &:active {
+      top: 3px;
+    }
+  }
+
+  &__link-text {
+    text-align: center;
+    width: 150px;
+  }
+
+  &__img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+  @extend %scrollbar;
+}

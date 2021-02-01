@@ -1,0 +1,70 @@
+.services {
+  margin-bottom: 30px;
+  &__title {
+    padding-bottom: 10px;
+    position: relative;
+    @extend %border-left;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 15px 0;
+    position: relative;
+    @extend %border-right;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 15px 0;
+
+    &--html::before,
+    &--css::before,
+    &--js::before,
+    &--scss::before,
+    &--gulp::before,
+    &--git::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20px;
+      mask-repeat: no-repeat;
+      background-size: cover;
+      width: 45px;
+      height: 45px;
+    }
+
+    &--html::before {
+      mask-image: url("../../images/icons/html5.svg");
+      background-color: $nav;
+      left: 23px;
+    }
+    &--css::before {
+      mask-image: url("../../images/icons/css3.svg");
+      background-color: $nav;
+      left: 23px;
+    }
+    &--js::before {
+      mask-image: url("../../images/icons/js.svg");
+      background-color: $nav;
+    }
+    &--scss::before {
+      mask-image: url("../../images/icons/sass.svg");
+      background-color: $nav;
+    }
+    &--gulp::before {
+      mask-image: url("../../images/icons/gulp.svg");
+      background-color: $nav;
+      left: 30px;
+    }
+
+    &--git::before {
+      mask-image: url("../../images/icons/github-square.svg");
+      background-color: $nav;
+    }
+  }
+}
