@@ -115,3 +115,22 @@ $accent: #e76c46;
   height: 100%;
   position: relative;
 }
+
+@media (max-width: 1024px) {
+  %inner-card {
+    padding: 50px 30px 50px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  %inner-card {
+    padding: 50px 50px 50px 50px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  %inner-card {
+    padding: 50px 25px 25px 25px;
+  }
+}

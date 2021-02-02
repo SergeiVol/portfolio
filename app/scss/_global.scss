@@ -33,3 +33,15 @@ main {
   position: relative;
   @extend %border-left;
 }
+
+@media (max-width: 992px) {
+  html,
+  body {
+    overflow: inherit;
+  }
+
+  .container {
+    height: auto;
+    padding: 0 15px;
+  }
+}

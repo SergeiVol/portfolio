@@ -82,3 +82,36 @@
     line-height: 24px;
   }
 }
+
+@media (max-width: 1024px) {
+  .about-me {
+    &__stat {
+      width: 235px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about-me {
+    &__content {
+      &::after {
+        display: none;
+      }
+    }
+
+    &__stat {
+      width: 100%;
+      float: none;
+      margin: 0 0 15px 0;
+      padding: 0 0 15px 0;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        background: radial-gradient(ellipse at right, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+      }
+    }
+  }
+} ;
