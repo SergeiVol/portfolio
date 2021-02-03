@@ -55,3 +55,20 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .education {
+    &__institution,
+    &__prof {
+      display: block;
+    }
+
+    &__span {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+}

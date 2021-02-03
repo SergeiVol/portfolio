@@ -306,12 +306,43 @@
       display: flex;
       flex-direction: column;
     }
-    &__img {
-      // display: none;
+    &__img-box {
+      width: 40%;
+    }
+
+    &__content {
+      width: 60%;
     }
 
     &__content-box {
-      padding-top: 50px;
+      padding-top: 60px;
+    }
+
+    &__autor {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+    }
+
+    &__prof-text {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    &__social-list {
+      width: 100px;
+      margin: 0 auto;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // row-gap: 10px;
+      // column-gap: 5px;
+    }
+
+    &__social-item {
+      & + & {
+        margin-left: 15px;
+      }
     }
   }
 }

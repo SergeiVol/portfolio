@@ -27,33 +27,52 @@
     }
   }
 
-  &__organization,
   &__period,
-  &__post {
+  &__specialization {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 10px;
   }
 
   &__span {
-    background-color: $accent;
-    padding: 3px 10px;
-    border-radius: 5px;
-    color: #ffffff;
-    display: table;
+    @extend %outline;
+    margin-right: 10px;
   }
 
-  &__text {
-    max-width: 250px;
-    width: 100%;
+  &__post-span {
+    @extend %outline;
+    float: left;
+    margin: 0 90px 0px 0;
+  }
+
+  &__post-text {
+    text-align: justify;
   }
 }
 
 @media (max-width: 1024px) {
   .experience {
     &__text {
-      max-width: 200px;
+      // max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .experience {
+    &__period,
+    &__specialization {
+      display: block;
+    }
+
+    &__span {
+      margin-bottom: 10px;
+    }
+
+    &__post-span {
+      float: none;
+      margin-bottom: 10px;
     }
   }
 }

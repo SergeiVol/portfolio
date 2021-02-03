@@ -82,7 +82,7 @@
       width: 1px;
       height: 55px;
       top: 0;
-      right: -32px;
+      right: -25px;
       background-color: #c6c6c6;
     }
 
@@ -121,21 +121,21 @@
       mask-image: url("../../images/icons/user.svg");
       width: 25px;
       height: 29px;
-      left: 15px;
+      left: 25px;
     }
 
     &--resume::before {
       mask-image: url("../../images/icons/list.svg");
       width: 29px;
       height: 29px;
-      left: 17px;
+      left: 20px;
     }
 
     &--works::before {
       mask-image: url("../../images/icons/paint.svg");
       width: 29px;
       height: 29px;
-      left: 15px;
+      left: 25px;
     }
 
     &--blog::before {
@@ -148,7 +148,7 @@
       mask-image: url("../../images/icons/at.svg");
       width: 29px;
       height: 29px;
-      left: 20px;
+      left: 25px;
     }
 
     &:hover {
@@ -181,7 +181,7 @@
 @media (max-width: 992px) {
   .menu {
     max-width: 100px;
-    padding: 15px 10px;
+    padding: 5px 5px;
     border-radius: 10px 0 0 10px;
 
     &__list {
@@ -191,7 +191,7 @@
     &__item {
       & + & {
         margin-left: 0;
-        margin-top: 5px;
+        margin-top: 10px;
       }
 
       &::after {
@@ -226,24 +226,30 @@
   }
 
   .menu {
-    max-width: 100%;
-    padding: 0 10px 0 90px;
+    margin: 0;
+    padding: 0 10px 0 10px;
     border-radius: 10px 10px 10px 10px;
     background-color: #afb3cd;
-    transform: translateY(-70px);
-    translate: transform 0.5s linear;
+    transform: translate3D(50px, -150px, 0);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 
     &--active {
-      transform: translateY(0);
-    }
-    &__list {
-      flex-direction: inherit;
+      transform: translate3D(50px, 10px, 0);
+      transition: transform 0.5s ease-in-out;
+      opacity: 1;
+      display: block;
+      visibility: visible;
     }
 
     &__item {
       & + & {
-        margin-left: 15px;
-        margin-top: 0;
+        margin-left: 0px;
+        margin-top: 15;
+      }
+      &::after {
+        display: none;
       }
     }
   }

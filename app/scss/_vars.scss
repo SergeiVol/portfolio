@@ -116,6 +116,14 @@ $accent: #e76c46;
   position: relative;
 }
 
+%outline {
+  background-color: $accent;
+  padding: 3px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  display: table;
+}
+
 @media (max-width: 1024px) {
   %inner-card {
     padding: 50px 30px 50px 30px;

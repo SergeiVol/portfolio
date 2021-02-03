@@ -68,3 +68,24 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .services {
+    &__item {
+      justify-content: flex-end;
+      &::before {
+        left: 0;
+        background-color: #783824;
+      }
+
+      &--html::before,
+      &--css::before {
+        left: 2px;
+      }
+
+      &--gulp::before {
+        left: 8px;
+      }
+    }
+  }
+} ;

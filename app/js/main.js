@@ -39,11 +39,6 @@ $(function () {
       top = $(id).offset().top;
     $("body,html").animate({ scrollTop: top }, 1500);
   });
-  // document.querySelectorAll(".toogle-menu").forEach((btn) => {
-  //   btn.addEventListener("click", (e) => {
-  //     btn.classList.toggle("active");
-  //   });
-  // });
 });
 
 function initMap() {
