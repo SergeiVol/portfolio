@@ -1,3 +1,73 @@
+.toogle-menu {
+  display: none;
+  --color: #333;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+
+  & svg {
+    width: 64px;
+    height: 48px;
+    top: -6px;
+    left: -14px;
+    stroke: var(--color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+  }
+
+  & svg path {
+    transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+        var(--delay, 0s),
+      stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+        var(--delay, 0s);
+    stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+    stroke-dashoffset: var(--offset, 126px);
+    transform: translateZ(0);
+  }
+  & svg path:nth-child(2) {
+    --duration: 0.7s;
+    --easing: ease-in;
+    --offset: 100px;
+    --array-2: 74px;
+  }
+  & svg path:nth-child(3) {
+    --offset: 133px;
+    --array-2: 107px;
+  }
+  &.active svg path {
+    --offset: 57px;
+  }
+  &.active svg path:nth-child(1),
+  .menu.active svg path:nth-child(3) {
+    --delay: 0.15s;
+    --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+  }
+  &.active svg path:nth-child(2) {
+    --duration: 0.4s;
+    --offset: 2px;
+    --array-1: 1px;
+  }
+  &.active svg path:nth-child(3) {
+    --offset: 58px;
+  }
+}
+
+.logo {
+  display: none;
+}
+
 .menu {
   max-width: 600px;
   margin: 0 auto;
@@ -18,7 +88,7 @@
       width: 1px;
       height: 55px;
       top: 0;
-      right: -32px;
+      right: -25px;
       background-color: #c6c6c6;
     }
 
@@ -49,42 +119,43 @@
       content: "";
       position: absolute;
       top: 0;
-      background-repeat: no-repeat;
+      mask-repeat: no-repeat;
       transition: background-color 0.2s linear;
+      background-color: $nav;
     }
 
     &--about::before {
-      mask-image: url("../../images/icons/user.svg");
+      mask-image: url("../images/icons/user.svg");
       width: 25px;
       height: 29px;
-      left: 15px;
+      left: 25px;
     }
 
     &--resume::before {
-      mask-image: url("../../images/icons/list.svg");
+      mask-image: url("../images/icons/list.svg");
       width: 29px;
       height: 29px;
-      left: 17px;
+      left: 20px;
     }
 
     &--works::before {
-      mask-image: url("../../images/icons/paint.svg");
+      mask-image: url("../images/icons/paint.svg");
       width: 29px;
       height: 29px;
-      left: 15px;
+      left: 25px;
     }
 
     &--blog::before {
-      mask-image: url("../../images/icons/comment.svg");
+      mask-image: url("../images/icons/comment.svg");
       width: 29px;
       height: 29px;
       left: 8px;
     }
     &--contact::before {
-      mask-image: url("../../images/icons/at.svg");
+      mask-image: url("../images/icons/at.svg");
       width: 29px;
       height: 29px;
-      left: 20px;
+      left: 25px;
     }
 
     &:hover {
@@ -109,6 +180,142 @@
       color: $accent;
       &::before {
         background-color: $accent;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .logo {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    &::after {
+      width: 100%;
+      height: 1px;
+      bottom: -15%;
+      left: 0px;
+      top: auto;
+      background-color: #c6c6c6;
+    }
+
+    path {
+      fill: $nav;
+      transition: fill 0.2s linear;
+    }
+
+    path:hover {
+      fill: $accent;
+    }
+
+    &--active {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+
+  .menu {
+    max-width: 100px;
+    padding: 0;
+    border-radius: 0;
+    background-color: none;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      & + & {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      &::after {
+        width: 100%;
+        height: 1px;
+        bottom: -15%;
+        left: 0px;
+        top: auto;
+      }
+    }
+
+    &__link {
+      padding-top: 25px;
+      font-size: 14px;
+      &::before {
+        width: 20px;
+        height: 24px;
+      }
+      &--about::before {
+        left: 21px;
+      }
+
+      &--resume::before {
+        left: 19px;
+      }
+
+      &--works::before {
+        left: 22px;
+      }
+
+      &--blog::before {
+        left: 8px;
+      }
+      &--contact::before {
+        left: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    display: block;
+    margin-bottom: 0;
+    path {
+      fill: $accent;
+    }
+  }
+  .toogle-menu {
+    display: block;
+    height: auto;
+    width: auto;
+    svg {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    border-radius: 0px 0px 0px 10px;
+    background-color: #afb3cd;
+    transform: translateX(150px);
+    transition: transform 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+
+    &--active {
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+      opacity: 1;
+      display: block;
+      visibility: visible;
+    }
+
+    &__item {
+      & + & {
+        margin-left: 0px;
+        margin-top: 15;
+      }
+      &::after {
+        display: none;
       }
     }
   }

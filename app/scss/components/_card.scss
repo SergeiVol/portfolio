@@ -38,30 +38,25 @@
   }
 }
 
-// @keyframes popup {
-//   0% {
-//     transform: translateX(-100px);
-//     opacity: 0;
-//   }
-//   50% {
-//     opacity: 0.9;
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-// }
+@media (max-width: 992px) {
+  .card {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    border-radius: inherit;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
 
-// @keyframes popup-close {
-//   0% {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-//   50% {
-//     opacity: 0.5;
-//   }
-//   100% {
-//     transform: translateX(-200px);
-//     opacity: 0;
-//   }
-// }
+@media (max-width: 576px) {
+  .card {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}

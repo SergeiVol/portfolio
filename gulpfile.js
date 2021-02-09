@@ -32,16 +32,7 @@ function styles() {
 }
 
 function scripts() {
-  return src([
-    "node_modules/jquery/dist/jquery.js",
-    "node_modules/slick-carousel/slick/slick.js",
-    "node_modules/mixitup/dist/mixitup.js",
-    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
-    "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
-    "node_modules/rateyo/src/jquery.rateyo.js",
-    "node_modules/jquery-form-styler/dist/jquery.formstyler.js",
-    "app/js/main.js",
-  ])
+  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -64,7 +55,16 @@ function images() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], { base: "app" }).pipe(dest("dist"));
+  return src(
+    [
+      "app/**/*.html",
+      "app/css/style.min.css",
+      "app/js/main.min.js",
+      "app/fonts/*.*",
+      "app/**/*.php",
+    ],
+    { base: "app" }
+  ).pipe(dest("dist"));
 }
 
 function cleanDist() {
