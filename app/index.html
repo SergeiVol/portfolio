@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="images/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -24,48 +29,94 @@
     <div class="container">
       <main class="main">
         <div class="page-wrapper">
-          <section class="card-started">
+          <section class="card-started" id="home">
             <div class="card-started__wrapper">
               <header class="header">
+                <a class="logo" href="#home">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1000 1000"
+                    width="40"
+                    height="40"
+                  >
+                    <path
+                      fill="#e76c46"
+                      fill-rule="evenodd"
+                      d="M463.88 10.32c-69.97 7.02-122.81 21.67-181.84 50.36-127.56 62.54-222.5 179.78-257.8 318.68C13.1 423.54 10 449.96 10 500.32c0 50.15 3.1 76.16 14.24 120.74C68 794.65 204.84 931.7 379.05 976.07c43.76 10.94 70.59 14.24 120.95 14.24 50.15 0 75.95-3.1 120.75-14.24 69.97-17.75 137.67-52.22 194.84-99.69 77.61-64.4 135.19-156.45 160.17-255.32C986.9 576.27 990 550.47 990 500.32c0-50.16-3.1-76.58-14.24-120.75-34.88-138.29-130.45-256.35-257.8-318.89-49.33-23.94-96.39-38.8-147.78-46.44-22.5-3.3-88.34-5.78-106.3-3.92zm43.34 250.37l32.4 31.79-72.24 72.45c-75.75 75.96-76.99 77.4-73.69 91.85.83 4.33 14.45 18.78 49.12 51.81 53.05 50.78 57.38 56.55 53.05 71-1.86 6.19-8.67 14.65-27.45 33.64-13.62 14.04-25.59 25.18-26.21 24.97-5.36-2.28-169.04-158.31-172.34-164.3-3.1-5.57-4.13-11.56-4.13-22.09 0-21.88 4.13-27.45 64.81-85.66 28.9-27.86 72.45-70.18 97.01-94.33 24.56-24.15 45.2-43.55 46.03-43.34.62.21 15.89 14.66 33.64 32.21zm134.37 181.42c93.5 87.51 94.74 89.16 93.09 111.87-.41 7.43-2.27 16.31-4.13 19.82-1.65 3.51-15.69 18.37-30.75 33.02-15.06 14.86-60.27 58.82-100.31 97.63l-72.86 71-32.4-31.79c-17.75-17.34-32.82-31.99-33.23-32.41-.62-.21 31.58-33.23 71.42-73.27 75.94-76.16 77.18-77.6 73.88-92.05-.83-4.34-14.45-18.78-49.13-51.81-53.04-50.78-57.38-56.55-53.04-71 1.86-6.19 8.67-14.66 27.45-33.64 13.62-14.04 25.59-25.18 26.42-24.97.62.41 38.39 35.29 83.59 77.6z"
+                    />
+                  </svg>
+                </a>
                 <button class="toogle-menu">
                   <svg viewBox="0 0 64 48">
-                    <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
-                    <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                    <path
+                      d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"
+                    ></path>
+                    <path
+                      d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"
+                    ></path>
                     <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
                   </svg>
                 </button>
                 <nav class="menu">
                   <ul class="menu__list">
                     <li class="menu__item">
-                      <a class="menu__link menu__link--about" href="#about">обо мне</a>
+                      <a class="menu__link menu__link--about" href="#about"
+                        >обо мне</a
+                      >
                     </li>
                     <li class="menu__item">
-                      <a class="menu__link menu__link--resume" href="#resume">резюме</a>
+                      <a class="menu__link menu__link--resume" href="#resume"
+                        >резюме</a
+                      >
                     </li>
                     <li class="menu__item">
-                      <a class="menu__link menu__link--works" href="#works">проекты</a>
+                      <a class="menu__link menu__link--works" href="#works"
+                        >проекты</a
+                      >
                     </li>
                     <li class="menu__item">
-                      <a class="menu__link menu__link--contact" href="#contact">контакты</a>
+                      <a class="menu__link menu__link--contact" href="#contact"
+                        >контакты</a
+                      >
                     </li>
                   </ul>
                 </nav>
               </header>
-              <div class="card-started__content-box">
-                <div class="card-started__img-box">
-                  <img class="card-started__img" src="images/autor-photo.png" alt="portfolio photo" />
+              <div class="card-started__content">
+                <div class="card-started__content-img">
+                  <div class="card-started__img-box">
+                    <div class="card-started__img-wrapper">
+                      <img
+                        class="card-started__img"
+                        src="images/autor-photo.png"
+                        alt="portfolio photo"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                <div class="card-started__content">
+                <div class="card-started__content-text">
                   <h3 class="card-started__autor">Волошенюк Сергей</h3>
                   <div class="card-started__prof">
-                    <h3 class="card-started__prof-text"><span class="card-started__prof-offset">WEB</span>-developer</h3>
+                    <h3 class="card-started__prof-text">
+                      <span class="card-started__prof-offset">WEB</span
+                      >-developer
+                    </h3>
                   </div>
 
                   <ul class="card-started__social-list">
                     <li class="card-started__social-item">
-                      <a class="card-started__social-link" href="https://www.instagram.com/voloshenyuk_sergei/" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18pt" height="18pt" viewBox="0 0 336 384">
+                      <a
+                        class="card-started__social-link"
+                        href="https://www.instagram.com/voloshenyuk_sergei/"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18pt"
+                          height="18pt"
+                          viewBox="0 0 336 384"
+                        >
                           <path
                             fill="#000"
                             fill-rule="evenodd"
@@ -75,8 +126,17 @@
                       </a>
                     </li>
                     <li class="card-started__social-item">
-                      <a class="card-started__social-link" href="https://https://www.linkedin.com/in/сергей-волошенюк-806509102/" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18pt" height="18pt" viewBox="0 0 448 512">
+                      <a
+                        class="card-started__social-link"
+                        href="https://https://www.linkedin.com/in/сергей-волошенюк-806509102/"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18pt"
+                          height="18pt"
+                          viewBox="0 0 448 512"
+                        >
                           <path
                             fill="#000"
                             fill-rule="evenodd"
@@ -86,8 +146,17 @@
                       </a>
                     </li>
                     <li class="card-started__social-item">
-                      <a class="card-started__social-link" href="https://vk.com/id19626180" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18pt" height="18pt" viewBox="0 0 576 512">
+                      <a
+                        class="card-started__social-link"
+                        href="https://vk.com/id19626180"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18pt"
+                          height="18pt"
+                          viewBox="0 0 576 512"
+                        >
                           <path
                             fill="#000"
                             fill-rule="evenodd"
@@ -97,8 +166,17 @@
                       </a>
                     </li>
                     <li class="card-started__social-item">
-                      <a class="card-started__social-link" href="https://github.com/SergeiVol" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18pt" height="18pt" viewBox="0 0 496 512">
+                      <a
+                        class="card-started__social-link"
+                        href="https://github.com/SergeiVol"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18pt"
+                          height="18pt"
+                          viewBox="0 0 496 512"
+                        >
                           <path
                             fill="#000"
                             fill-rule="evenodd"
@@ -132,15 +210,22 @@
                           </li>
                           <li class="about-me__stat-item">
                             <p class="about-me__stat-text">Город:</p>
-                            <span class="about-me__stat-span">Екатеринбург</span>
+                            <span class="about-me__stat-span"
+                              >Екатеринбург</span
+                            >
                           </li>
                         </ul>
                       </div>
-                      <h5 class="about-me__subtitle">Пиривет! Меня зовут Волошенюк Сергей!</h5>
+                      <h5 class="about-me__subtitle">
+                        Пиривет! Меня зовут Волошенюк Сергей!
+                      </h5>
                       <p class="about-me__text">
-                        Я Web-developer, живу в Екатеринбрга. Замнимаюсь адаптивной версткой и постоянно развиваюсь в этом направлении. Люблю красывый
-                        и читаемый код, использую flex и grid, а также метадологию БЭМ. В свободное время путешествую и изучаю Уралу, являюсь гидом
-                        сообщества любителей гор и турризма #ДоскиЛыжи.
+                        Я Web-developer, живу в Екатеринбрге. Замнимаюсь
+                        адаптивной версткой и постоянно развиваюсь в этом
+                        направлении. Люблю красывый и читаемый код, использую
+                        flex и grid, а также метадологию БЭМ. В свободное время
+                        путешествую и изучаю Урал, являюсь гидом сообщества
+                        любителей гор и турризма #ДоскиЛыжи.
                       </p>
                     </div>
                   </div>
@@ -150,8 +235,12 @@
                   <div class="services__items">
                     <div class="services__item services__item--html">HTML</div>
                     <div class="services__item services__item--css">CSS</div>
-                    <div class="services__item services__item--js">JS/jQuery</div>
-                    <div class="services__item services__item--scss">SCSS/SASS</div>
+                    <div class="services__item services__item--js">
+                      JS/jQuery
+                    </div>
+                    <div class="services__item services__item--scss">
+                      SCSS/SASS
+                    </div>
                     <div class="services__item services__item--gulp">GULP</div>
                     <div class="services__item services__item--git">GIT</div>
                   </div>
@@ -195,14 +284,20 @@
                       </li>
                       <li class="experience__specialization">
                         <span class="experience__span">Специализация:</span>
-                        <p class="experience__text">Безопасность и охранные услуги.</p>
+                        <p class="experience__text">
+                          Безопасность и охранные услуги.
+                        </p>
                       </li>
                       <li class="experience__post">
                         <span class="experience__post-span">Опыт:</span>
                         <p class="experience__post-text">
-                          Долгое время работал в сфере Безопасность, занимал такие должности как: зам. Директора ЧОП, Директор ЧОП, руководитель
-                          службы безопасности, зам. генирального директора по Безопасноти. Занимался разработкой систем безопасноти предприятия,
-                          расследовательской деятельностью по предотвращению потерь и хищению информациию.
+                          Долгое время работал в сфере Безопасность, занимал
+                          такие должности как: зам. Директора ЧОП, Директор ЧОП,
+                          руководитель службы безопасности, зам. генирального
+                          директора по Безопасноти. Занимался разработкой систем
+                          безопасности предприятия, расследовательской
+                          деятельностью по предотвращению потерь и хищению
+                          информациию.
                         </p>
                       </li>
                     </ul>
@@ -210,7 +305,9 @@
                     <ul class="experience__item">
                       <li class="experience__period">
                         <span class="experience__span">Период:</span>
-                        <p class="experience__text">с 2020 по настоящее время</p>
+                        <p class="experience__text">
+                          с 2020 по настоящее время
+                        </p>
                       </li>
                       <li class="experience__specialization">
                         <span class="experience__span">Специализация:</span>
@@ -219,8 +316,9 @@
                       <li class="experience__post">
                         <span class="experience__post-span">Опыт:</span>
                         <p class="experience__post-text">
-                          Занимаюсь адаптивной версткой сайтов любой сложности, адаптация сайтов для мобильных устройст, дополнение или изменения
-                          сайтов.
+                          Занимаюсь адаптивной версткой сайтов любой сложности,
+                          адаптация сайтов для мобильных устройст, дополнение
+                          или изменения сайтов.
                         </p>
                       </li>
                     </ul>
@@ -233,11 +331,13 @@
                     <ul class="education__item">
                       <li class="education__institution">
                         <span class="education__span">Учебное заведение:</span>
-                        <p class="education__text">Уральский Государственный Лесотехнический Университет</p>
+                        <p class="education__text">
+                          Уральский Государственный Лесотехнический Университет
+                        </p>
                       </li>
                       <li class="education__prof">
                         <span class="education__span">Специальность:</span>
-                        <p class="education__text">Менеджмент предприятий</p>
+                        <p class="education__text">Менеджмент</p>
                       </li>
                     </ul>
                   </div>
@@ -250,7 +350,7 @@
                 <h4 class="works__title title">Мои работы</h4>
                 <div class="works__items">
                   <div class="works__item">
-                    <img class="works__img" src="../../images/works/1.jpg" alt="" />
+                    <img class="works__img" src="images/works/1.jpg" alt="" />
                     <div class="works__box">
                       <h5 class="works__box-title">Сайт портфолио</h5>
                       <div class="works__box-link">
@@ -261,7 +361,29 @@
                   </div>
 
                   <div class="works__item">
-                    <img class="works__img" src="../../images/works/2.jpg" alt="" />
+                    <img class="works__img" src="images/works/2.jpg" alt="" />
+                    <div class="works__box">
+                      <h5 class="works__box-title">Интернет магазин одежды</h5>
+                      <div class="works__box-link">
+                        <a class="works__link" href="#">Сайт</a>
+                        <a class="works__link" href="#">GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="works__item">
+                    <img class="works__img" src="images/works/2.jpg" alt="" />
+                    <div class="works__box">
+                      <h5 class="works__box-title">Интернет магазин одежды</h5>
+                      <div class="works__box-link">
+                        <a class="works__link" href="#">Сайт</a>
+                        <a class="works__link" href="#">GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="works__item">
+                    <img class="works__img" src="images/works/2.jpg" alt="" />
                     <div class="works__box">
                       <h5 class="works__box-title">Интернет магазин одежды</h5>
                       <div class="works__box-link">
@@ -282,27 +404,92 @@
                   <ul class="contact__list">
                     <li class="contact__item">
                       <p class="contact__item-text">Телефон:</p>
-                      <a class="contact__link" href="tel:79126407079">+7(912)640-70-79</a>
+                      <a class="contact__link" href="tel:79126407079"
+                        >+7(912)640-70-79</a
+                      >
+                    </li>
+
+                    <li class="contact__item">
+                      <p class="contact__item-text">Мессенджеры:</p>
+                      <div class="contact__link-box">
+                        <a
+                          class="contact__link contact__link--messenger"
+                          href="https://tlgg.ru/Voloshenyuk_Sergei"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 496 512"
+                            width="25pt"
+                            height="25pt"
+                          >
+                            <path
+                              fill="#0088cc"
+                              fill-rule="evenodd"
+                              d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          class="contact__link contact__link--messenger"
+                          href=" https://wa.me/+79126407079"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="25pt"
+                            height="25pt"
+                          >
+                            <path
+                              fill="#3de675"
+                              fill-rule="evenodd"
+                              d="M224 122.8c-72.7 0-131.8 59.1-131.9 131.8 0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6 49.9-13.1 4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8 0-35.2-15.2-68.3-40.1-93.2-25-25-58-38.7-93.2-38.7zm77.5 188.4c-3.3 9.3-19.1 17.7-26.7 18.8-12.6 1.9-22.4.9-47.5-9.9-39.7-17.2-65.7-57.2-67.7-59.8-2-2.6-16.2-21.5-16.2-41s10.2-29.1 13.9-33.1c3.6-4 7.9-5 10.6-5 2.6 0 5.3 0 7.6.1 2.4.1 5.7-.9 8.9 6.8 3.3 7.9 11.2 27.4 12.2 29.4s1.7 4.3.3 6.9c-7.6 15.2-15.7 14.6-11.6 21.6 15.3 26.3 30.6 35.4 53.9 47.1 4 2 6.3 1.7 8.6-1 2.3-2.6 9.9-11.6 12.5-15.5 2.6-4 5.3-3.3 8.9-2 3.6 1.3 23.1 10.9 27.1 12.9s6.6 3 7.6 4.6c.9 1.9.9 9.9-2.4 19.1zM400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM223.9 413.2c-26.6 0-52.7-6.7-75.8-19.3L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5 29.9 30 47.9 69.8 47.9 112.2 0 87.4-72.7 158.5-160.1 158.5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="contact__item">
                       <p class="contact__item-text">Почта:</p>
-                      <a class="contact__link" href="mailto:voloshenyuks@gmail.com">VoloshenyukS@gmail.com</a>
+                      <a
+                        class="contact__link"
+                        href="mailto:voloshenyuks@gmail.com"
+                        >VoloshenyukS@gmail.com</a
+                      >
                     </li>
 
                     <li class="contact__item">
                       <p class="contact__item-text">Место проживая:</p>
-                      <address class="contact__address">Россия, г. Екатеринбург</address>
+                      <address class="contact__address">
+                        Россия, г. Екатеринбург
+                      </address>
                     </li>
                   </ul>
                 </div>
-                <form class="contact__form">
+                <form class="contact__form" id="form" action="#">
                   <h4 class="contact__title title">Напишите мне</h4>
                   <div class="contact__form-box">
-                    <input class="contact__input contact__input--name" type="text" name="name" placeholder="Ваше имя" required="required" />
-                    <input class="contact__input contact__input--email" type="text" name="email" placeholder="Ваш email" required="required" />
+                    <input
+                      class="contact__input contact__input--name _req"
+                      id="name"
+                      type="text"
+                      name="name"
+                      placeholder="Ваше имя"
+                    />
+                    <input
+                      class="contact__input contact__input--email _req _email"
+                      id="email"
+                      type="text"
+                      name="email"
+                      placeholder="Ваш email"
+                    />
                   </div>
-                  <textarea class="contact__textarea" placeholder="Cообщение" required="required"></textarea>
+                  <textarea
+                    class="contact__textarea _req"
+                    id="comment"
+                    placeholder="Cообщение"
+                    name="comment"
+                  ></textarea>
                   <button class="contact__btn" type="submit">Отправить</button>
                 </form>
               </div>
@@ -311,7 +498,10 @@
         </div>
       </main>
     </div>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANm01TrnFRMjMIYGyf423-bJHsoE_9GPo&callback=initMap"></script>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANm01TrnFRMjMIYGyf423-bJHsoE_9GPo&callback=initMap"
+    ></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

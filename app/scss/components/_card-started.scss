@@ -1,6 +1,5 @@
 .card-started {
   position: relative;
-  height: 630px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -25,7 +24,7 @@
   }
 
   &__img-box {
-    background-image: url("../../images/wall.jpg");
+    background-image: url("../images/wall.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -57,8 +56,9 @@
     margin: 0 auto;
   }
 
-  &__content {
+  &__content-text {
     padding: 24px 0;
+    height: 200px;
   }
 
   &__autor {
@@ -231,7 +231,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../../images/wall.jpg");
+    background-image: url("../images/wall.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px 10px 0 0;
@@ -249,11 +249,11 @@
       background-color: inherit;
     }
 
-    &__content-box {
-      padding: 0 10px;
+    &__content {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      padding-top: 20px;
     }
 
     &__img-box {
@@ -273,7 +273,7 @@
     }
 
     &__img {
-      max-width: 200px;
+      max-width: 160px;
       width: 100%;
     }
 
@@ -288,41 +288,56 @@
   .card-started {
     position: relative;
     background-image: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      z-index: -1;
-      opacity: 0.4;
-      border-radius: 10px 10px 0 0;
-    }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-    &__img-box {
-      width: 40%;
-    }
+    height: 100vh;
 
     &__content {
-      width: 60%;
+      padding-top: 60px;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: radial-gradient(
+          ellipse at right,
+          #ddd 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+        left: 0px;
+        bottom: 0;
+      }
     }
 
-    &__content-box {
-      padding-top: 60px;
+    &__content-img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__img-box {
+      overflow: inherit;
+    }
+
+    &__img-wrapper {
+      position: relative;
+      display: block;
+    }
+
+    &__img {
+      max-width: 100%;
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border: 3px solid #a67c9e;
+      border-radius: 50%;
+      background-color: #687eac;
     }
 
     &__autor {
-      position: absolute;
-      top: 50px;
-      left: 0;
-      right: 0;
     }
 
     &__prof-text {
@@ -333,10 +348,6 @@
     &__social-list {
       width: 100px;
       margin: 0 auto;
-      // display: grid;
-      // grid-template-columns: repeat(2, 1fr);
-      // row-gap: 10px;
-      // column-gap: 5px;
     }
 
     &__social-item {

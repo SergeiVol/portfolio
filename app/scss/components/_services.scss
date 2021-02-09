@@ -39,31 +39,31 @@
     }
 
     &--html::before {
-      mask-image: url("../../images/icons/html5.svg");
+      mask-image: url("../images/icons/html5.svg");
       background-color: $nav;
       left: 23px;
     }
     &--css::before {
-      mask-image: url("../../images/icons/css3.svg");
+      mask-image: url("../images/icons/css3.svg");
       background-color: $nav;
       left: 23px;
     }
     &--js::before {
-      mask-image: url("../../images/icons/js.svg");
+      mask-image: url("../images/icons/js.svg");
       background-color: $nav;
     }
     &--scss::before {
-      mask-image: url("../../images/icons/sass.svg");
+      mask-image: url("../images/icons/sass.svg");
       background-color: $nav;
     }
     &--gulp::before {
-      mask-image: url("../../images/icons/gulp.svg");
+      mask-image: url("../images/icons/gulp.svg");
       background-color: $nav;
       left: 30px;
     }
 
     &--git::before {
-      mask-image: url("../../images/icons/github-square.svg");
+      mask-image: url("../images/icons/github-square.svg");
       background-color: $nav;
     }
   }

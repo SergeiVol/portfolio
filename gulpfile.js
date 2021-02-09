@@ -40,6 +40,9 @@ function scripts() {
     "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "node_modules/rateyo/src/jquery.rateyo.js",
     "node_modules/jquery-form-styler/dist/jquery.formstyler.js",
+    "node_modules/inputmask/dist/jquery.inputmask.js",
+    "node_modules/jquery-validation/dist/jquery.validate.js",
+    "node_modules/just-validate/dist/js/just-validate.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
@@ -64,7 +67,16 @@ function images() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], { base: "app" }).pipe(dest("dist"));
+  return src(
+    [
+      "app/**/*.html",
+      "app/css/style.min.css",
+      "app/js/main.min.js",
+      "app/fonts/*.*",
+      "app/**/*.php",
+    ],
+    { base: "app" }
+  ).pipe(dest("dist"));
 }
 
 function cleanDist() {

@@ -31,6 +31,13 @@
 
   &__link {
     color: inherit;
+    &--messenger {
+      display: inline-block;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   &__address {
@@ -46,8 +53,8 @@
   }
 
   &__title {
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     position: relative;
     @extend %border-left;
   }
@@ -56,13 +63,25 @@
     position: relative;
     padding-bottom: 10px;
     @extend %border-right;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 525, 0.7) url("../images/sendmail.gif") center /
+        100px no-repeat;
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+    }
   }
 
-  &__title {
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    @extend %border-left;
+  .sending.contact__form::before {
+    opacity: 1;
+    visibility: visible;
   }
 
   &__form-box {
@@ -79,8 +98,15 @@
     border: none;
     background-color: rgba(247, 238, 227, 0.4);
     border-radius: 10px;
+    position: relative;
+    outline: none;
+
     &:last-child {
       margin-right: 0;
+    }
+
+    &:focus {
+      border: 1px solid #18a0d8;
     }
 
     &[placeholder] {
@@ -90,11 +116,26 @@
     }
 
     &--name[placeholder] {
-      background-image: url("../../images/icons/user.svg");
+      background-image: url("../images/icons/user.svg");
     }
     &--email[placeholder] {
-      background-image: url("../../images/icons/mail.svg");
+      background-image: url("../images/icons/mail.svg");
     }
+  }
+  .js-validate-error-field:nth-child(3) {
+    margin-right: 0px;
+  }
+
+  .js-validate-error-label {
+    display: none;
+  }
+
+  &__input.error {
+    border: 1px solid #ff0000;
+  }
+
+  &__input.valid {
+    border: 1px solid #0e8600;
   }
 
   &__textarea {
@@ -106,12 +147,27 @@
     border: none;
     background-color: rgba(247, 238, 227, 0.4);
     border-radius: 10px;
+    position: relative;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #18a0d8;
+    }
+
     &[placeholder] {
-      background-image: url("../../images/icons/message.svg");
+      background-image: url("../images/icons/message.svg");
       background-repeat: no-repeat;
       background-position: 98% 15%;
       background-size: 18px;
     }
+  }
+
+  &__textarea.error {
+    border: 1px solid #ff0000;
+  }
+
+  &__textarea.valid {
+    border: 1px solid #0e8600;
   }
 
   &__btn {
@@ -152,6 +208,9 @@
 
     &__link {
       display: block;
+      &--messenger {
+        display: inline-block;
+      }
     }
 
     &__form-box {
