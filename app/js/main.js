@@ -49,14 +49,6 @@ $(function () {
     }
   });
 
-  // $(".menu__link, .logo").on("click", function (event) {
-  //   event.preventDefault();
-  //   var id = $(this).attr("href"),
-  //     top = $(id).offset().top;
-  //   $("body,html").animate({ scrollTop: top }, 1500);
-  // });
-
-  //Smooth scrolling when click to nav
   $(".menu > ul > li > a, .logo").click(function (e) {
     e.preventDefault();
     var curLink = $(this);
@@ -74,24 +66,17 @@ $(function () {
   });
 
   function onScrollHandle() {
-    //Navbar shrink when scroll down
-    // $(".navbar-default").toggleClass("navbar-shrink", $(this).scrollTop() > 50);
-
-    //Get current scroll position
     var currentScrollPos = $(document).scrollTop() + 70;
 
-    //Iterate through all node
     $(".menu > ul > li > a").each(function () {
       var curLink = $(this);
       var refElem = $(curLink.attr("href"));
-      //Compare the value of current position and the every section position in each scroll
       if (
         refElem.position().top <= currentScrollPos &&
         refElem.position().top + refElem.height() > currentScrollPos
       ) {
-        //Remove class active in all nav
         $(".menu > ul > li > a").removeClass("menu__link--active");
-        //Add class active
+
         curLink.addClass("menu__link--active");
       } else {
         curLink.removeClass("menu__link--active");
@@ -101,14 +86,13 @@ $(function () {
     $(".logo").each(function () {
       var curLink = $(this);
       var refElem = $(curLink.attr("href"));
-      //Compare the value of current position and the every section position in each scroll
+
       if (
         refElem.position().top <= currentScrollPos &&
         refElem.position().top + refElem.height() > currentScrollPos
       ) {
-        //Remove class active in all nav
         $(".logo").removeClass("logo--active");
-        //Add class active
+
         curLink.addClass("logo--active");
       } else {
         curLink.removeClass("logo--active");
