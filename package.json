@@ -19,16 +19,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "inputmask": "^5.0.5",
-    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
-    "jquery-form-styler": "^2.0.2",
-    "jquery-validation": "^1.19.3",
-    "just-validate": "^1.5.0",
-    "mixitup": "^3.3.1",
-    "node-sass": "^5.0.0",
-    "rateyo": "^2.3.2",
-    "slick-carousel": "^1.8.1"
+    "node-sass": "^5.0.0"
   },
   "dependencies": {}
 }
